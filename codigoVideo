@@ -1,0 +1,131 @@
+openapi: 3.0.0
+info: 
+  title:   cbtis API
+  description:  esta    aplicacion permite obtener informacion de empleados   
+  termsOfService:   https:localhost/terms
+  contact:
+    name: Eliseo
+    url: https://eliseoflutter.github.io/
+    email: elprofenava2002@gmail.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+  version: 1.0.0
+  
+servers: 
+  - url:  http://www.google.com/api
+    description: Google Server
+    
+  - url:  http://www.facebook.com/api
+    description: facebook Server
+    
+paths:
+   /employees:
+    get:
+      description: permite obtener la lista de empleado segun parametros
+      parameters: 
+      - in: query
+        name: id
+        requiered: false
+        description: codigo del empleado
+        schema:
+          type: number
+          example: 2000
+         
+      - in: query
+        name: sueldo
+        type: number
+        requiered: true
+        description: sueldo del empleado
+
+     
+     
+     
+      responses:
+       200:
+         description: succeessful request
+         content:
+           application/json:
+             schema:
+               type: array
+               items:
+                properties:
+                  id:
+                    type: integer
+                    example: 465
+                  nombre:
+                    type: string
+                    example: Eliseo nava
+                  sueldo:
+                    type: number
+                    format: float
+                    example: 20000
+      404:
+        description: Request not found
+        content:
+          application/json:
+            schema:
+              type: string
+              example: {"message":"Error 404. page or request not found."}
+    post:
+      description: permite crear usuarios en la base de datos
+      parameters:
+        - name: employee
+          in: query
+          description: codigo del empleado
+          schema:
+            type: objet
+            properties:
+              nombre:
+                type: string
+                description: primer nombre
+                example: 'Eliseo'
+              id:
+                type: number
+                description: Id del empleado
+                example: 321
+              email:
+               type: string
+               description: correo electronico del empleado
+               example: elisa@gmail.com
+      responses: 
+        200:
+          description: successful request
+          content:
+            application/json:
+              schema:
+                type: string
+                example: "OK"
+                
+      
+  /employes/{id}:
+    get:
+      description: Obtener informacion de un empleado ingresando su ID
+      parameters:
+        - in: query
+        name: id
+        requiered: true
+        description: codigo del empleado
+        schema:
+          type: number
+          example: 465
+          
+     responses:    
+       200:
+         description: successful request
+         content:
+           application/json:
+             schema:
+               type: array
+               items:
+                 properties:
+                   id:
+                     type: integer
+                     example: 465
+                   nombre:
+                     type: string
+                     example: Eliseo Nava
+                   sueldo:
+                     type: number
+                     format: float
+                     example: 20000
