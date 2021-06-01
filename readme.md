@@ -19,6 +19,9 @@ Darse de alta en
 
 https://swagger.io/specification/
 
+https://swagger.io/docs/specification/media-types/
+
+
 ## Mi cuenta
 
 https://app.swaggerhub.com/apis/eliseoflutter/cbtis128API/1.0.0#/servers
