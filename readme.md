@@ -33,3 +33,8 @@ https://swagger.io/docs/specification/media-types/
 
 https://app.swaggerhub.com/apis/eliseoflutter/cbtis128API/1.0.0#/servers
 
+## Swagger Editor generar server y generar cliente Machine
+
+
+https://editor.swagger.io/
+
