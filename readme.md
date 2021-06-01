@@ -8,6 +8,13 @@ https://youtu.be/MnC-XJkg6MQ
 
 https://developer.mozilla.org/es/docs/Web/HTTP/Status/200
 
+## OpenApi
+
+https://www.openapis.org/
+
+## OpenAPI Specification github
+
+https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.0.md
 
 ## Tutorialpoint HTTP
 
